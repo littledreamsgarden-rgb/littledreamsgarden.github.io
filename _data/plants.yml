@@ -1,4 +1,4 @@
-id: 1
+- id: 1
   name: Rosa 'Peace'
   family: Rosaceae
   exposure: pieno sole
@@ -6,7 +6,7 @@ id: 1
   height: 120
   description: Rosa arbustiva, fioritura abbondante.
 
-id: 2
+- id: 2
   name: Lavanda angustifolia
   family: Lamiaceae
   exposure: pieno sole
@@ -14,7 +14,7 @@ id: 2
   height: 60
   description: Arbusto aromatico, resistente alla siccità.
 
-id: 3
+- id: 3
   name: Hosta 'Sum and Substance'
   family: Asparagaceae
   exposure: ombra
