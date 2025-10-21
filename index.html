@@ -1,61 +1,12 @@
----
-layout: null
----
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>{{ site.title }}</title>
-  <link rel="stylesheet" href="/assets/css/styles.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
-</head>
-<body>
-  <h1>{{ site.title }}</h1>
-  <div class="controls">
-    <input id="search" class="search" placeholder="Cerca nome, famiglia..." />
-    <div class="filter-group">
-      <label>Esposizione</label>
-      <select id="exposure-filter">
-        <option value="">Tutte</option>
-        <option value="pieno sole">pieno sole</option>
-        <option value="mezz'ombra">mezz'ombra</option>
-        <option value="ombra">ombra</option>
-      </select>
-    </div>
-    <div class="filter-group">
-      <label>Zona minima</label>
-      <select id="zone-filter">
-        <option value="">Tutte</option>
-        <option value="4">4+</option>
-        <option value="5">5+</option>
-        <option value="6">6+</option>
-        <option value="7">7+</option>
-      </select>
-    </div>
-    <div class="filter-group">
-      <label>Ordina</label>
-      <select id="sort-by">
-        <option value="name">Nome</option>
-        <option value="height">Altezza</option>
-      </select>
-    </div>
+<h1>Catalogo Piante</h1>
+<div class="grid">
+{% for plant in site.littleplants %}
+  <div class="card">
+    <a href="{{ plant.url }}">
+      <img src="{{ plant.image }}" alt="{{ plant.title }}" style="width:100%; height:auto;">
+      <h3>{{ plant.title }}</h3>
+      <p>{{ plant.family }}</p>
+    </a>
   </div>
-
-  <div id="plants">
-    <div id="plist" class="grid list">
-      {% for p in site.data.plants %}
-      <div class="card item" data-exposure="{{ p.exposure }}" data-zone="{{ p.zone }}" data-height="{{ p.height }}">
-        <h3 class="name">{{ p.name }}</h3>
-        <div class="family">{{ p.family }}</div>
-        <div class="exposure">{{ p.exposure }}</div>
-        <div class="zone">Zona {{ p.zone }}</div>
-        <div class="height">{{ p.height }} cm</div>
-        <p class="description">{{ p.description }}</p>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-
-  <script src="/assets/js/site.js"></script>
-</body>
-</html>
+{% endfor %}
+</div>
