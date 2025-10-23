@@ -2,30 +2,17 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>{{ page.title }} - Little Dreams Garden</title>
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <title>{{ page.title }}</title>
 </head>
 <body>
-  <header>
-    <a href="/">← Torna al catalogo</a>
-    <h1>{{ page.title }}</h1>
-    <h2>{{ page.scientific_name }}</h2>
-  </header>
-
-  <img src="{{ page.image }}" alt="{{ page.title }}" style="max-width:100%; height:auto;">
-
-  <section>
-    <p><strong>Famiglia:</strong> {{ page.family }}</p>
-    <p><strong>Tipo:</strong> {{ page.type }}</p>
-    <p><strong>Altezza:</strong> {{ page.height }}</p>
-    <p><strong>Esposizione:</strong> {{ page.exposure }}</p>
-    <p><strong>Terreno:</strong> {{ page.soil }}</p>
-    <p><strong>Rusticità:</strong> {{ page.hardiness }}</p>
-    <p><strong>Diffusione:</strong> {{ page.spreading }}</p>
-  </section>
+  <h1>{{ page.title }}</h1>
+  <h2><em>{{ page.scientific_name }}</em></h2>
+  <p><strong>Famiglia:</strong> {{ page.family }}</p>
 
   <main>
     {{ content }}
   </main>
+
+  <p><a href="/">← Torna al catalogo</a></p>
 </body>
 </html>
