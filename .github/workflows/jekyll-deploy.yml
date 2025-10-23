@@ -18,9 +18,8 @@ jobs:
           ruby-version: 3.2
 
       - name: Install dependencies
-        run: |
-          gem install bundler
-          bundle install
+  run: bundle install
+
 
       - name: Build site
         run: bundle exec jekyll build
