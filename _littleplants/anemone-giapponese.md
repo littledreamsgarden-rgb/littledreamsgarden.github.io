@@ -10,6 +10,7 @@ soil: "Umido ma ben drenato; ricco di sostanza organica"
 hardiness: "Molto alta (H7, < -20°C)"
 spreading: "Può diffondersi in modo aggressivo"
 image: "https://littledreamsgarden.wordpress.com/wp-content/uploads/2025/08/pexels-photo-5743781-1-edited.jpeg"
+permalink: /plants/anemone-giapponese/
 ---
 
 ## Descrizione
